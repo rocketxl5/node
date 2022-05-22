@@ -6,9 +6,9 @@ const getNotes = function () {
   return 'Your notes...';
 };
 
-getNotes();
-
 module.exports = getNotes;
+
+// module.exports = getNotes;
 // const add = function (a, b) {
 //   return a + b;
 // };
