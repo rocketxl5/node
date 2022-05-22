@@ -1,6 +1,9 @@
-// Node file module needs to be loaded with require()
-const fs = require('fs');
+const getNotes = require('./utils');
 
-fs.writeFileSync('notes.txt', 'My name is Fred.\n');
+console.log(getNotes());
 
-fs.appendFileSync('notes.txt', 'This is a new line');
+// const add = require('./utils');
+
+// const sum = add(3, 7);
+
+// console.log(sum);
