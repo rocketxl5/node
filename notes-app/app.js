@@ -1,10 +1,10 @@
 // const validator = require('validator');
-
 // import chalk from 'chalk';
-const chalk = require('chalk');
+// const chalk = require('chalk');
 const yargs = require('yargs');
-const getNotes = require('./notes.js');
+const notes = require('./notes.js');
 
+// Create add command
 yargs.command({
   command: 'add',
   describe: 'Add a new note',
@@ -21,12 +21,12 @@ yargs.command({
       type: 'string'
     }
   },
-
   handler: function (argv) {
-    console.log(`${argv.title}: ${argv.body}`);
+    notes.addNote(argv.title, argv.body);
   }
 });
 
+// Create remove command
 yargs.command({
   command: 'remove',
   describe: 'Remove a note',
@@ -35,6 +35,7 @@ yargs.command({
   }
 });
 
+// Create list command
 yargs.command({
   command: 'list',
   describe: 'List notes',
@@ -43,6 +44,7 @@ yargs.command({
   }
 });
 
+// Create read command
 yargs.command({
   command: 'read',
   describe: 'Remove a note',
